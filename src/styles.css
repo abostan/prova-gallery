@@ -1,0 +1,236 @@
+:root {
+  --paletteA1: rgb(218, 217, 222);
+  --paletteA2: rgb(253, 163, 113);
+  --paletteA3: rgb(219, 174, 215);
+  --paletteA4: rgb(110, 181, 223);
+  --paletteA5: rgb(0, 140, 153);
+  --paletteA6: rgb(28, 168, 193);
+  --paletteA7: rgb(128, 142, 203);
+  --paletteA8: rgb(81, 83, 134);
+  --paletteB1: rgb(207, 217, 226);
+  --paletteB2: rgb(254, 180, 105);
+  --paletteB3: rgb(154, 216, 231);
+  --paletteB4: rgb(0, 135, 167);
+  --paletteB5: rgb(117, 196, 165);
+  --paletteB6: rgb(3, 158, 202);
+  --paletteB7: rgb(181, 117, 167);
+  --paletteB8: rgb(29, 34, 64);
+  --paletteC1: rgb(253, 234, 168);
+  --paletteC2: rgb(232, 122, 105);
+  --paletteC3: rgb(122, 199, 219);
+  --paletteC4: rgb(74, 160, 211);
+  --paletteC5: rgb(170, 216, 187);
+  --paletteC6: rgb(180, 184, 222);
+  --paletteC7: rgb(136, 92, 143);
+  --paletteD1: rgb(254, 220, 130);
+  --paletteD2: rgb(217, 192, 222);
+  --paletteD3: rgb(100, 195, 215);
+  --paletteD4: rgb(0, 135, 125);
+  --paletteD5: rgb(3, 111, 113);
+  --paletteD6: rgb(135, 193, 230);
+  --paletteD7: rgb(128, 142, 203);
+
+  /* Main Colors */
+  --palette1: var(--paletteD5);
+  --palette2: var(--paletteA6);
+  --palette3: var(--paletteD1);
+  --palette4: var(--paletteA5);
+  --palette5: var(--paletteC1);
+  --palette6: var(--paletteD2);
+
+  --text: var(--paletteD5);
+  --text-heading: var(--paletteD5);
+  --text-subheading: var(--paletteD5);
+  --menu-bg: var(--paletteB1);
+  --menu-fg: var(--paletteD5);
+  --highlight-bg: var(--paletteC7);
+  --highlight-fg: var(--paletteC5);
+  --link-bg: rgb(248, 248, 240);
+}
+
+html,
+body {
+  font-family: "Montserrat" !important;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background-color: #ffffff;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+p {
+  line-height: 1.6;
+}
+
+header.main {
+  margin-top: 0rem;
+  padding: 0rem;
+  font-size: 1rem;
+}
+
+header.main .title {
+  display: flex;
+  justify-content: space-between;
+}
+.burger {
+  margin-top: 1rem;
+  top: 2vw;
+  right: 3vw;
+  z-index: 99;
+  cursor: pointer;
+}
+.menu {
+  font-family: "auto-mission-regular";
+  font-size: 4vw;
+  position: fixed;
+  z-index: 98;
+  top: 1rem;
+  right: 0;
+  opacity: 1;
+  background-color: var(--menu-bg);
+  padding: 1vw 4vw 0vw 1vw;
+  border-top-left-radius: 4vw;
+  border-bottom-left-radius: 4vw;
+  transition: transform 0.5s ease-in-out;
+}
+.menu.hide {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+}
+.menu ul {
+  list-style-type: none;
+  margin-top: calc(6vw + 3rem);
+  text-align: right;
+  margin-bottom: 2vw;
+}
+.menu li {
+  margin-top: 0vw;
+  padding: 2vw;
+  cursor: pointer;
+}
+.menu a {
+  padding: 1vw;
+  color: var(--menu-fg);
+}
+.menu a:hover {
+  color: var(--highlight-fg);
+  background-color: var(--highlight-bg);
+}
+header.main h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "auto-mission-regular" !important;
+  font-size: 8vw;
+}
+
+footer.mainx {
+  padding: 0 1rem;
+  color: rgb(3, 111, 113);
+}
+
+footer.mainx p {
+  max-width: 50rem;
+}
+
+footer.main div {
+  padding: 1rem;
+  display: inline;
+}
+
+a {
+  color: var(--palette1);
+  cursor: pointer;
+  text-decoration: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 1px 2px;
+  margin: 2px;
+  font-weight: bold;
+  transition: border-color 0.2s linear;
+  background-color: var(--link-bg);
+}
+a[href^="http://"], a[href^="https://"]
+{
+  text-decoration: underline;
+}
+footer.main a {
+  text-decoration: none;
+}
+a:hover {
+  border-color: var(--palette1);
+}
+
+img {
+  box-shadow: 10px 15px 10px grey !important;
+  margin-bottom: 2rem;
+}
+.wallImages {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.wallImages > img {
+  width: 30%;
+  box-shadow: 5px 5px 5px grey !important;
+  margin-bottom: 0;
+}
+.contact {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contact > img {
+  width: 30%;
+  max-width: 200px;
+  min-width: 100px;
+  border-radius: 9999px;
+  box-shadow: 5px 5px 5px grey !important;
+  margin-bottom: 0;
+}
+.contact table,
+.contact tr,
+.contact td {
+  height: initial;
+  width: initial;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.contact td.label {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.page {
+  padding: 2rem;
+}
+.page h1 {
+  cursor: pointer;
+}
+.gestures {
+  font-family: "auto-mission-regular";
+}
+.event img {
+  width: clamp(200px, 30%, 500px);
+  margin-left: 1vw;
+  height: auto;
+  object-fit: contain;
+  box-shadow: none !important;
+  float: right;
+}
+.rsvp {
+  font-size: 3vw;
+  padding: 1vw;
+  margin: 1vw;
+  background-color: rgb(170, 216, 187);
+}
+.prices {
+  display: grid;
+  grid-template-columns: 5fr 3fr 2fr;
+  grid-gap: 1rem;
+}
+.react-photo-gallery--gallery {
+  font-size: max(1rem) !important;
+}
